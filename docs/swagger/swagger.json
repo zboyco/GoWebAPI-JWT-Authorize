@@ -1,0 +1,68 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "WebAPI v0.0.1",
+        "title": "WebAPI",
+        "contact": {},
+        "license": {},
+        "version": "0.0.1"
+    },
+    "host": "{{.Host}}",
+    "basePath": "/",
+    "paths": {
+        "/Data/GetAccountInfo": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "账户"
+                ],
+                "summary": "获取账户信息",
+                "responses": {
+                    "200": {
+                        "description": "{\"Code\":0,\"Msg\":\"\",\"Body\":\"msg\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/Login": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "账号"
+                ],
+                "summary": "登录",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "userName",
+                        "name": "userName",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "userPwd",
+                        "name": "userPwd",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"Code\":0,\"Msg\":\"\",\"Body\":\"abc\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

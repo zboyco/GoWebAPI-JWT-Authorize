@@ -1,0 +1,45 @@
+basePath: /
+host: '{{.Host}}'
+info:
+  contact: {}
+  description: WebAPI v0.0.1
+  license: {}
+  title: WebAPI
+  version: 0.0.1
+paths:
+  /Data/GetAccountInfo:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"Code":0,"Msg":"","Body":"msg"}'
+          schema:
+            type: string
+      summary: 获取账户信息
+      tags:
+      - 账户
+  /Login:
+    get:
+      parameters:
+      - description: userName
+        in: query
+        name: userName
+        required: true
+        type: string
+      - description: userPwd
+        in: query
+        name: userPwd
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"Code":0,"Msg":"","Body":"abc"}'
+          schema:
+            type: string
+      summary: 登录
+      tags:
+      - 账号
+swagger: "2.0"
