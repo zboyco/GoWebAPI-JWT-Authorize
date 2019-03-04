@@ -1,4 +1,14 @@
 basePath: /
+definitions:
+  models.ResultModel:
+    properties:
+      body:
+        type: object
+      code:
+        type: integer
+      msg:
+        type: string
+    type: object
 host: '{{.Host}}'
 info:
   contact: {}
@@ -13,9 +23,10 @@ paths:
       - application/json
       responses:
         "200":
-          description: '{"Code":0,"Msg":"","Body":"msg"}'
+          description: OK
           schema:
-            type: string
+            $ref: '#/definitions/models.ResultModel'
+            type: object
       summary: 获取账户信息
       tags:
       - 账户
@@ -36,9 +47,10 @@ paths:
       - application/json
       responses:
         "200":
-          description: '{"Code":0,"Msg":"","Body":"abc"}'
+          description: OK
           schema:
-            type: string
+            $ref: '#/definitions/models.ResultModel'
+            type: object
       summary: 登录
       tags:
       - 账号

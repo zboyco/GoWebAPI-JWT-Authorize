@@ -4,5 +4,5 @@ package models
 type ResultModel struct {
 	Code int
 	Msg  string
-	Body string
+	Body interface{}
 }

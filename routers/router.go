@@ -1,8 +1,8 @@
 package routers
 
 import (
-	"GoWebAPI-JWT-Authorize/controllers"
-	"GoWebAPI-JWT-Authorize/middleware/jwt"
+	"github.com/zboyco/GoWebAPI-JWT-Authorize/controllers"
+	"github.com/zboyco/GoWebAPI-JWT-Authorize/middleware/jwt"
 
 	"github.com/gin-gonic/gin"
 	"github.com/swaggo/gin-swagger"

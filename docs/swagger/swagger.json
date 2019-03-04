@@ -21,9 +21,10 @@
                 "summary": "获取账户信息",
                 "responses": {
                     "200": {
-                        "description": "{\"Code\":0,\"Msg\":\"\",\"Body\":\"msg\"}",
+                        "description": "OK",
                         "schema": {
-                            "type": "string"
+                            "type": "object",
+                            "$ref": "#/definitions/models.ResultModel"
                         }
                     }
                 }
@@ -56,11 +57,28 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{\"Code\":0,\"Msg\":\"\",\"Body\":\"abc\"}",
+                        "description": "OK",
                         "schema": {
-                            "type": "string"
+                            "type": "object",
+                            "$ref": "#/definitions/models.ResultModel"
                         }
                     }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "models.ResultModel": {
+            "type": "object",
+            "properties": {
+                "body": {
+                    "type": "object"
+                },
+                "code": {
+                    "type": "integer"
+                },
+                "msg": {
+                    "type": "string"
                 }
             }
         }
