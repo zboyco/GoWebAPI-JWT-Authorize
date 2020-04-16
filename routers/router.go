@@ -2,7 +2,7 @@ package routers
 
 import (
 	"github.com/zboyco/GoWebAPI-JWT-Authorize/controllers"
-	"github.com/zboyco/GoWebAPI-JWT-Authorize/middleware/jwt"
+	"github.com/zboyco/GoWebAPI-JWT-Authorize/middleware"
 
 	"github.com/gin-gonic/gin"
 	"github.com/swaggo/gin-swagger"
@@ -20,7 +20,7 @@ func InitRouter() *gin.Engine {
 	r.GET("/Login", controllers.Login)
 
 	m := r.Group("/Data")
-	m.Use(jwt.Auth())
+	m.Use(middleware.JwtAuth())
 	{
 		m.GET("/GetAccountInfo", controllers.GetAccountInfo)
 	}
