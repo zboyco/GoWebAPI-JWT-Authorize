@@ -11,7 +11,7 @@ var (
 	// 盐
 	jwtSecret = []byte("gV5Af9fJohYC")
 	// 发行人
-	issur = "Tamanya"
+	issur = "BaiYang"
 
 	// ErrorExpired 过期
 	ErrorExpired = errors.New("token is expired")
